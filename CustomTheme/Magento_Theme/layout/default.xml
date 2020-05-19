@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container 
+            name="top.header.saleoff"
+            htmlTag="div"
+            htmlClass="header_top_saleoff"
+            before="-">
+                <block class="Magento\Framework\View\Element\Template" name="saleoff" template="Magento_Theme::saleoff.phtml"/>
+            </container>
+            <referenceContainer name="header.panel">
+            <container 
+            name="header.top.intro.text" 
+            before="-" 
+            htmlTag="div" 
+            htmlClass="top_intro_text">
+                <block class="Magento\Framework\View\Element\Template" name="intro.text" template="Magento_Theme::intro_text.phtml" />
+            </container>
+            </referenceContainer>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer.content" template="Magento_Theme::footer.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

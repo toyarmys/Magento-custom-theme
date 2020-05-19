@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    <move element="top.search" destination="nav.and.search" after="-" />
+    <move element="catalog.topnav" destination="nav.and.search" after="-" />
+    <referenceContainer name="header-wrapper">
+            <container 
+            name="hotline" 
+            before="logo"
+            htmlTag="div" 
+            htmlClass="hotline">
+                <block class="Magento\Framework\View\Element\Template" name="hotline-text" template="Magento_Cms::hotline.phtml" />
+            </container>
+    </referenceContainer>
+    <referenceContainer name="content">
+        <container
+            name="nav.and.search"
+            after="header-wrapper"
+            htmlClass="header_navbar_search"
+            htmlTag="div"
+        >
+        </container>
+    </referenceContainer>
+    </body>
+</page>
