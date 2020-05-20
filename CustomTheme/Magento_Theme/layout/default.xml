@@ -20,7 +20,20 @@
             </referenceContainer>
         </referenceContainer>
         <referenceContainer name="footer">
-            <block class="Magento\Framework\View\Element\Template" name="footer.content" template="Magento_Theme::footer.phtml"/>
+        <container 
+            name="footer.content" 
+            before="-" 
+            htmlTag="div" 
+            htmlClass="footer_content">
+            <container 
+            name="footer.logo.and.info"
+            htmlTag="div"
+            htmlClass="logo-info-footer">
+                <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Theme::footer.phtml"/>
+            </container>
+            <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Theme::footer-popular-tag.phtml"/>
+        </container>
         </referenceContainer>
+        <referenceBlock name="footer_links" remove="true" />
     </body>
 </page>

@@ -1,6 +1,22 @@
-<?php
-echo $this->getLayout()
-->createBlock('Magento\Cms\Block\Block')
-->setBlockId('my-custom-footer-block')
-->toHtml();
-?>
+<div class="footer-logo">
+    <?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('footer-logo')
+    ->toHtml();
+    ?>
+</div>
+<div class="footer-info">
+    <?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('my-custom-footer-block')
+    ->toHtml();
+    ?>
+    <?php
+        echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('social-footer')
+        ->toHtml();
+    ?>
+</div>
