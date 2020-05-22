@@ -8,5 +8,6 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <script src="https://kit.fontawesome.com/e721f06e1b.js" src_type="url"></script>
+        <css src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" src_type="url" />
     </head>
 </page>

@@ -43,3 +43,82 @@ ul.header.links{
         color: #000;
     }
 }
+
+/* CSS footer */
+footer.page-footer{
+    background-color: #eeeeee !important;
+    /* CSS footer-info div*/
+    .footer-info{
+        font-size: 13px !important;
+        margin-top: 15px;
+        .footer-address, .footer-phone, .footer-mail{
+            display: flex;
+            .footer-address-content{
+                transform: translate(30px,0);
+            }
+            .footer-phone-content{
+                transform: translate(11px,0);
+            }
+            .footer-mail-content{
+                transform: translate(20px,0);
+            }
+        }
+    }
+    /*End CSS footer-info div*/
+    /* CSS Popular tags div */
+    .footer-popular-tag ul li{
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        margin-bottom: 5px !important;
+        a{color: #727272; text-decoration: none;}
+    }
+    /* End CSS popular tags div */
+    /* CSS benefit div */
+    .benefit{
+        display: flex; 
+        line-height: 5px;
+        margin-bottom: 15px;
+        .benefit-text{
+            transform: translate(15px,15px);
+        }
+    }
+    /* End CSS benefit div */
+    /* CSS soial footer div */
+    .footer-social-links ul{
+        padding: 0;
+        li{
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin: 15px 10px 0 0;
+            a{
+                display: inline-block;
+                padding: 5px 7px;
+                color: #999;
+                &:hover{
+                    color: @main-color;
+                }
+            }
+        }
+    } 
+}
+/* End CSS footer */
+/* CSS newsletter */
+.block.newsletter{
+    transform: translate(10px,-50px) !important;
+    .title{
+        display: block;
+    }
+    #newsletter{
+        height: 40px;
+    }
+    .control::before{
+        content: none !important;
+    }
+    .actions button{
+        height: 40px !important;
+    }
+}

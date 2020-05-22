@@ -739,7 +739,12 @@
 }
 
 // Custom CSS
-@justify_content_atrribute_center: center;
+
+/* Override attribute */
+body{font-size: 13px !important;font-family: 'Montserrat' !important;}
+/* End override */
+
+/* CSS header promo */
 .header_top_saleoff{
     background-image: url('../images/bg_header_01.jpg');
     background-size: cover;
@@ -752,6 +757,9 @@
         font-size: 1.8rem;
     }
 }
+/* End CSS header promo */
+
+/* CSS panel header */
 .page-header .panel.wrapper{
     background-color: #fff !important;
 }
@@ -767,6 +775,9 @@
         }
     }
 }
+/* End CSS panel header */
+
+/* CSS search bar header */
 .header_navbar_search{
     margin-top: -25px;
     .navigation{
@@ -776,14 +787,4 @@
         transform: translate(0, -40px);
     }
 }
-.footer-popular-tag{
-    width:25%;
-    ul li{
-        display: inline;
-        color: lightseagreen;
-        a{
-            text-decoration: none;
-        }
-    }
-}
-
+/* End CSS search bar header */

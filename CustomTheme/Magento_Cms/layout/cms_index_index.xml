@@ -21,5 +21,23 @@
         >
         </container>
     </referenceContainer>
+    <referenceContainer name="footer">
+        <container 
+            name="footer.content" 
+            before="-" 
+            htmlTag="div" 
+            htmlClass="footer_content row">
+            <container 
+            name="footer.logo.and.info"
+            htmlTag="div"
+            htmlClass="logo-info-footer col-12 col-xl-3 col-lg-3">
+                <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Cms::footer.phtml"/>
+            </container>
+            <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Cms::footer-popular-tag.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer.benefit" template="Magento_Cms::footer-benefit.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer.social" template="Magento_Cms::footer-social-links.phtml"/>
+        </container>
+        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true" />
     </body>
 </page>
