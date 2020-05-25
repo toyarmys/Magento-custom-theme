@@ -1,0 +1,25 @@
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('slider')
+    ->toHtml();
+?>
+<script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'owlcarousel'
+    ], function($){
+        $(document).ready(function() {
+            $('.owl-carousel ').owlCarousel({
+                loop:true,
+                center: true,
+                nav:true,
+                mouseDrag: true,
+                items:1,
+                dots:true,
+                autoplay:true,
+                autoplayTimeout:3000
+            })
+        });
+    });
+</script>

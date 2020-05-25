@@ -19,5 +19,13 @@
             </container>
             </referenceContainer>
         </referenceContainer>
+        <referenceContainer name="copyright">
+            <container name="footer.payment"
+                after="copyright"
+                htmlTag="div"
+                htmlClass="footer-payment">
+                    <block class="Magento\Framework\View\Element\Template" name="payment" template="Magento_Theme::payment.phtml"/>
+            </container>
+        </referenceContainer>
     </body>
 </page>

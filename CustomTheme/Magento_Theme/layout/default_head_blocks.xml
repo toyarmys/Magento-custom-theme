@@ -9,5 +9,6 @@
     <head>
         <script src="https://kit.fontawesome.com/e721f06e1b.js" src_type="url"></script>
         <css src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" src_type="url" />
+        <css src="css/owl.carousel.css"/>
     </head>
 </page>

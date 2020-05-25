@@ -47,6 +47,9 @@ ul.header.links{
 /* CSS footer */
 footer.page-footer{
     background-color: #eeeeee !important;
+    .footer_content{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+    }
     /* CSS footer-info div*/
     .footer-info{
         font-size: 13px !important;
@@ -103,22 +106,34 @@ footer.page-footer{
                 }
             }
         }
+    }
+    .footer-payment, .footer-copyright, .footer-policy{
+        margin-top: 15px !important;
+        .copyright{
+            color: #666666;
+            .link-footer{
+                text-decoration: none;
+                color: @main-color;
+            }
+        }
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                    color: #666666;
+                }
+            }
+        }
     } 
+    .footer-payment{
+        text-align: center;
+    }
 }
 /* End CSS footer */
-/* CSS newsletter */
-.block.newsletter{
-    transform: translate(10px,-50px) !important;
-    .title{
-        display: block;
-    }
-    #newsletter{
-        height: 40px;
-    }
-    .control::before{
-        content: none !important;
-    }
-    .actions button{
-        height: 40px !important;
-    }
+/* CSS copyright */
+.copyright{
+    background-color: #eee !important;
 }
+/* End CSS copyright */

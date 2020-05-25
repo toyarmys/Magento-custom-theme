@@ -18,9 +18,6 @@
             <div class="field newsletter">
                 <div class="control">
                     <label for="newsletter">
-                        <span class="label">
-                            <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
-                        </span>
                         <input name="email" type="email" id="newsletter"
                                placeholder="<?= $block->escapeHtmlAttr(__('Your email address...')) ?>"
                                data-mage-init='{"mage/trim-input":{}}'
@@ -31,7 +28,7 @@
             </div>
             <div class="actions">
                 <button class="action subscribe primary"
-                        title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
+                        title="<?= $block->escapeHtmlAttr(__('OK')) ?>"
                         type="submit"
                         aria-label="Subscribe">
                     <span><?= $block->escapeHtml(__('OK')) ?></span>

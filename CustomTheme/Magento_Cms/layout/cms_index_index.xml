@@ -1,43 +1,76 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-    <move element="top.search" destination="nav.and.search" after="-" />
-    <move element="catalog.topnav" destination="nav.and.search" after="-" />
-    <referenceContainer name="header-wrapper">
-            <container 
-            name="hotline" 
-            before="logo"
-            htmlTag="div" 
-            htmlClass="hotline">
-                <block class="Magento\Framework\View\Element\Template" name="hotline-text" template="Magento_Cms::hotline.phtml" />
+        <move element="top.search" destination="nav.and.search" after="-" />
+        <move element="catalog.topnav" destination="nav.and.search" after="-" />
+        <move element="copyright" destination="copyright.div" />
+        <move element="form.subscribe" destination="footer-social" after="-"/>
+        <referenceContainer name="header-wrapper">
+                <container 
+                name="hotline" 
+                before="logo"
+                htmlTag="div" 
+                htmlClass="hotline">
+                    <block class="Magento\Framework\View\Element\Template" name="hotline-text" template="Magento_Cms::hotline.phtml" />
+                </container>
+        </referenceContainer>
+
+        <referenceContainer name="page.top">
+            <container
+                name="nav.and.search"
+                after="-"
+                htmlClass="header_navbar_search"
+                htmlTag="div"
+            >
             </container>
-    </referenceContainer>
-    <referenceContainer name="content">
-        <container
-            name="nav.and.search"
-            after="header-wrapper"
-            htmlClass="header_navbar_search"
-            htmlTag="div"
-        >
-        </container>
-    </referenceContainer>
-    <referenceContainer name="footer">
-        <container 
-            name="footer.content" 
-            before="-" 
-            htmlTag="div" 
-            htmlClass="footer_content row">
+        </referenceContainer>
+
+        <referenceContainer name="footer">
             <container 
-            name="footer.logo.and.info"
-            htmlTag="div"
-            htmlClass="logo-info-footer col-12 col-xl-3 col-lg-3">
-                <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Cms::footer.phtml"/>
+                name="footer.content" 
+                before="-" 
+                htmlTag="div" 
+                htmlClass="footer_content row">
+                <container 
+                name="footer.logo.and.info"
+                htmlTag="div"
+                htmlClass="logo-info-footer col-12 col-xl-3 col-lg-3">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Cms::footer.phtml"/>
+                </container>
+                <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Cms::footer-popular-tag.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="footer.benefit" template="Magento_Cms::footer-benefit.phtml"/>
+                <container 
+                name="footer-social"
+                htmlTag="div"
+                htmlClass="footer-social-links col-xl-3 col-lg-3 col-12">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.social" template="Magento_Cms::footer-social-links.phtml"/>
+                </container>
             </container>
-            <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Cms::footer-popular-tag.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="footer.benefit" template="Magento_Cms::footer-benefit.phtml"/>
-            <block class="Magento\Framework\View\Element\Template" name="footer.social" template="Magento_Cms::footer-social-links.phtml"/>
-        </container>
+            <container name="footer-policy"
+            after="footer.content"
+            htmlTag="div"
+            htmlClass="footer-policy">
+                <block class="Magento\Framework\View\Element\Template" name="policy" template="Magento_Cms::policy.phtml"/>
+            </container>
+            <container name="copyright.div"
+            after="footer-policy"
+            htmlTag="div"
+            htmlClass="footer-copyright">
+            </container>
+            <container name="payment.div"
+            after="copyright.div"
+            htmlTag="div"
+            htmlClass="footer-payment">
+                <block class="Magento\Framework\View\Element\Template" name="payment" template="Magento_Cms::payment.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="main.content" htmlTag="div" htmlClass="page-main-full-width">
+            <container name="slider-owl-carousel">
+                <block class="Magento\Framework\View\Element\Template" name="slider_test" template="Magento_Cms::slider.phtml" />
+            </container>
         </referenceContainer>
         <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="columns" remove="true" />
     </body>
 </page>
