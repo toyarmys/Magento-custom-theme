@@ -5,6 +5,7 @@
         <move element="catalog.topnav" destination="nav.and.search" after="-" />
         <move element="copyright" destination="copyright.div" />
         <move element="form.subscribe" destination="footer-social" after="-"/>
+        <move element="product_demo_content" destination="container" after="-"/>
         <referenceContainer name="header-wrapper">
                 <container 
                 name="hotline" 
@@ -66,11 +67,25 @@
         </referenceContainer>
 
         <referenceContainer name="main.content" htmlTag="div" htmlClass="page-main-full-width">
-            <container name="slider-owl-carousel">
+            <container name="slider-owl-carousel" htmlTag="div" htmlClass="slider-container">
                 <block class="Magento\Framework\View\Element\Template" name="slider_test" template="Magento_Cms::slider.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="slider_content" template="Magento_Cms::slider-content.phtml" /> 
+            </container>
+            <container name="container" htmlTag="div" htmlClass="container">
+                <container name="row" htmlTag="div" htmlClass="row">
+                    <container name="first-container" htmlClass="col-xl-6 col-lg-6 first-container" htmlTag="div">    
+                    </container>
+                    <container name="second-container" htmlClass="col-xl-3 col-lg-3 second-container" htmlTag="div">    
+                    </container>
+                    <container name="third-container" htmlClass="col-xl-3 col-lg-3 third-container" htmlTag="div">    
+                    </container>
+                </container>
             </container>
         </referenceContainer>
         <referenceBlock name="footer_links" remove="true" />
         <referenceBlock name="columns" remove="true" />
+        <referenceContainer name="row">
+            <block class="Magento\Framework\View\Element\Template" name="product_demo" template="Magento_Cms::introduction-product.phtml" />
+        </referenceContainer>
     </body>
 </page>

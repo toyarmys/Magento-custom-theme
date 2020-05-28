@@ -1,6 +1,74 @@
 @button-primary__background: lightblue;
 //have to copy this variable from _theme.less from the parent theme
 @copyright__background-color: @color-gray-middle4;
+//My variables
 @main-color: #ff6633;
+@main-text-color: #999999;
+@main-background-color: #fff;
+@white-text-color: #fff;
+@main-background-footer: #eeeeee;
+@black-text-color: #000;
+@footer-text-link-color: #727272;
+@primary-font-size: 1.4rem;
+
+//Transform translate mixin
+.translate (@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	-moz-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	-o-transform: translate(@x, @y);
+}
+
+//Border radius mixin
+.round-borders (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+//Box-shadow mixin
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+//Position mixin
+.position(@position, @top, @right, @bottom, @left) {
+	position: @position;
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+  }
+
+  .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+	.slider-container{
+		.slider-main-content{
+			.under-text{
+				font-size: 13rem;
+				.position(relative; -10rem; 0; 0; -13rem);
+			}
+			.above-text{
+				.position(relative; -23rem; 0; 0; -18rem);
+				font-size: 3rem;
+				letter-spacing: 2.92rem;
+			}
+			.brand-name{
+				.position(relative; -20rem; 0; 0; -18.5rem);
+				font-size: 4rem;
+			}
+			.sale-off{
+				.position(relative; -21rem; 0; 0; -18.8rem);
+				font-size: 3.5rem;
+			}
+			.purchase{
+				.position(relative; -13rem; 0; 0; -19rem);
+			}
+		}
+	}
+  }
+
 
 

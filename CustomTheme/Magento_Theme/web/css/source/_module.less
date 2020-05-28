@@ -741,7 +741,8 @@
 // Custom CSS
 
 /* Override attribute */
-body{font-size: 13px !important;font-family: 'Montserrat' !important;}
+html{font-size: 10px;}
+body{font-family: 'Montserrat', sans-serif !important;}
 /* End override */
 
 /* CSS header promo */
@@ -761,19 +762,22 @@ body{font-size: 13px !important;font-family: 'Montserrat' !important;}
 
 /* CSS panel header */
 .page-header .panel.wrapper{
-    background-color: #fff !important;
+    background-color: @main-background-color !important;
 }
 .top_intro_text{
-    transform: translate(0,25px);
+    .translate(0;25px;);
+    font-size: @primary-font-size;
     p{
-        color:#000;
+        color:@black-text-color;
         a{
             color: @main-color;
-            &:hover{
-                text-decoration: none;
-            }
         }
     }
+}
+
+.navigation .level0.active > .level-top,
+.navigation .level0.has-active > .level-top{
+    border-width: 3px 0 0 0 !important;
 }
 /* End CSS panel header */
 
@@ -781,10 +785,13 @@ body{font-size: 13px !important;font-family: 'Montserrat' !important;}
 .header_navbar_search{
     margin-top: -25px;
     .navigation{
-        background-color: #fff;
+        background-color: @main-background-color;
+        font-size: @primary-font-size;
     }
     .block-search{
-        transform: translate(0, -40px);
+        position: absolute;
+        left: 50%;
+        .translate(370px;-40px);
     }
 }
 /* End CSS search bar header */

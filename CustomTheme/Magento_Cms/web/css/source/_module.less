@@ -1,34 +1,39 @@
 .switcher-currency, .switcher-language{
-    color: #ab12c3;
+    color: @main-text-color;
+    font-size: @primary-font-size;
 }
 
 ul.header.links{
-    color: #ab12c3;
+    color: @main-text-color;
     li{
-        color: #8a8cee;
+        color: @main-text-color;
         a{
-            color: #ab231b!important;
+            color: @main-text-color!important;
+            &:hover{
+                text-decoration: none !important;
+            }
         }
         button{
-            color: tomato !important;
+            color: @main-text-color !important;
         }
     }
 }
 
 .page-header .panel.wrapper{
-    color: #fff;
+    color: @main-background-color;
+    border-bottom: none;
 }
 .header.content{
     display: flex;
 }
 .nav-sections-item-content{
-    background-color: #fff;
+    background-color: @main-background-color;
     .navigation{
-        background-color: #fff;
+        background-color: @main-background-color;
     }
 }
 .nav-sections{
-    border-top: 1px solid red;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 .logo{
     display: block !important;
@@ -40,15 +45,17 @@ ul.header.links{
     flex-direction: row;
     a{
         text-decoration: none;
-        color: #000;
+        color: @black-text-color;
+        font-size: @primary-font-size;
     }
 }
 
 /* CSS footer */
 footer.page-footer{
-    background-color: #eeeeee !important;
+    background-color: @main-background-footer !important;
+    font-size: @primary-font-size;
     .footer_content{
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
     }
     /* CSS footer-info div*/
     .footer-info{
@@ -57,13 +64,13 @@ footer.page-footer{
         .footer-address, .footer-phone, .footer-mail{
             display: flex;
             .footer-address-content{
-                transform: translate(30px,0);
+                .translate(30px;0);
             }
             .footer-phone-content{
-                transform: translate(11px,0);
+                .translate(11px;0);
             }
             .footer-mail-content{
-                transform: translate(20px,0);
+                .translate(20px;0);
             }
         }
     }
@@ -74,7 +81,7 @@ footer.page-footer{
         border: 1px solid #ccc;
         padding: 5px 10px;
         margin-bottom: 5px !important;
-        a{color: #727272; text-decoration: none;}
+        a{color: @footer-text-link-color; text-decoration: none;}
     }
     /* End CSS popular tags div */
     /* CSS benefit div */
@@ -83,7 +90,7 @@ footer.page-footer{
         line-height: 5px;
         margin-bottom: 15px;
         .benefit-text{
-            transform: translate(15px,15px);
+            .translate(15px;15px);
         }
     }
     /* End CSS benefit div */
@@ -92,15 +99,15 @@ footer.page-footer{
         padding: 0;
         li{
             display: inline-block;
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            .round-borders(50%);
             width: 30px;
             height: 30px;
             margin: 15px 10px 0 0;
             a{
                 display: inline-block;
                 padding: 5px 7px;
-                color: #999;
+                color: @main-text-color;
                 &:hover{
                     color: @main-color;
                 }
@@ -110,7 +117,7 @@ footer.page-footer{
     .footer-payment, .footer-copyright, .footer-policy{
         margin-top: 15px !important;
         .copyright{
-            color: #666666;
+            color: @footer-text-link-color;
             .link-footer{
                 text-decoration: none;
                 color: @main-color;
@@ -122,7 +129,7 @@ footer.page-footer{
                 display: inline-block;
                 a{
                     text-decoration: none;
-                    color: #666666;
+                    color: @footer-text-link-color;
                 }
             }
         }
@@ -134,6 +141,108 @@ footer.page-footer{
 /* End CSS footer */
 /* CSS copyright */
 .copyright{
-    background-color: #eee !important;
+    background-color: @main-background-footer !important;
+    font-size: 13px;
 }
 /* End CSS copyright */
+/* CSS owl-carousel */
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+    .position(absolute;50%;0;0;0)!important;
+    font-size: 50px !important;
+    .box-shadow(none) !important;
+}
+.owl-prev{
+    left: 0;
+    .translate(40px;-50px);
+    &:hover{
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+.owl-next{
+    right: 0;
+    .translate(-40px;-50px);
+    &:hover{
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+.owl-dots{
+    .translate(0;-50px);
+    padding-left: 50px;
+    .owl-dot{
+        .box-shadow(none) !important;
+        span{
+            background-color: rgba(255, 255, 255, .5) !important;
+        }
+    }
+}
+.owl-theme .owl-dots .owl-dot.active span{
+    background-color: @main-background-color !important;
+}
+.slider-container{
+    .position(relative;0;0;0;0);
+    .slider-main-content{
+        .position(absolute; 50%; 0; 0; 50%);
+        .translate(-50%;-50%);
+        z-index: 1;
+        .under-text{
+            font-size: 15rem;
+            color: #cdcdcd;
+            font-weight: 100;
+            .position(relative; 0; 0; 0; -23rem);
+            font-weight: 100;
+            letter-spacing: 2rem;
+        }
+        .above-text{
+            .position(relative; -15rem; 0; 0; -31rem);
+            font-size: calc(@primary-font-size + 2.2rem);
+            color: @main-color;
+            letter-spacing: 3.47rem;
+            font-weight: 700;
+        }
+        .brand-name{
+            .position(relative; -14rem; 0; 0; -31.5rem);
+            font-size: 6rem;
+            font-weight: 500;
+            letter-spacing: .5rem;
+        }
+        .sale-off{
+            .position(relative; -17rem; 0; 0; -31.3rem);
+            font-size: 4rem;
+            font-weight: 900;
+        }
+        .purchase{
+            .box-shadow(none);
+            width: 17rem;
+            height: 5rem;
+            font-size: @primary-font-size;
+            text-align: center;
+            background-color: @main-color;
+            color: @white-text-color;
+            .position(relative; -8rem; 0; 0; -31rem);
+        }
+    }
+}
+/*End CSS Carousel */
+/*CSS Container - Introduction products*/
+// .first-container{
+//     .position(relative;0;0;0;0);
+//     .content-container{
+//         .position(absolute;50%;0;0;50%);
+//         .translate(-50%;-50%);
+//         .autumn-collection{
+//             .position(relative;-11rem;0;0;-9rem);
+//             font-size: 2.4rem;
+//             color: @main-text-color;
+//             width: 50%;
+//         }
+//         .new-accessories{
+//             .position(relative;-12rem;0;0;-9rem);
+//             font-size: @primary-font-size;
+//             font-weight: 900;
+//         }
+//     }
+// }
+img.height-fix{
+    height: 54rem;
+    width: auto;
+}
