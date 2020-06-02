@@ -795,3 +795,94 @@ body{font-family: 'Montserrat', sans-serif !important;}
     }
 }
 /* End CSS search bar header */
+/* CSS footer */
+footer.page-footer{
+    background-color: @main-background-footer !important;
+    font-size: @primary-font-size;
+    .footer_content{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+    /* CSS footer-info div*/
+    .footer-info{
+        font-size: 13px !important;
+        margin-top: 15px;
+        .footer-address, .footer-phone, .footer-mail{
+            display: flex;
+            .footer-address-content{
+                .translate(30px;0);
+            }
+            .footer-phone-content{
+                .translate(11px;0);
+            }
+            .footer-mail-content{
+                .translate(20px;0);
+            }
+        }
+    }
+    /*End CSS footer-info div*/
+    /* CSS Popular tags div */
+    .footer-popular-tag ul li{
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        margin-bottom: 5px !important;
+        a{color: @footer-text-link-color; text-decoration: none;}
+    }
+    /* End CSS popular tags div */
+    /* CSS benefit div */
+    .benefit{
+        display: flex; 
+        line-height: 5px;
+        margin-bottom: 15px;
+        .benefit-text{
+            .translate(15px;15px);
+        }
+    }
+    /* End CSS benefit div */
+    /* CSS soial footer div */
+    .footer-social-links ul{
+        padding: 0;
+        li{
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            .round-borders(50%);
+            margin: 15px 10px 0 0;
+            a{
+                display: inline-block;
+                color: @main-text-color;
+                width: 30px;
+                height: 30px;
+                vertical-align: middle; 
+                text-align: center;
+                padding: 5px;
+                &:hover{
+                    color: @main-color;
+                }
+            }
+        }
+    }
+    .footer-payment, .footer-copyright, .footer-policy{
+        margin-top: 15px !important;
+        .copyright{
+            color: @footer-text-link-color;
+            .link-footer{
+                text-decoration: none;
+                color: @main-color;
+            }
+        }
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                    color: @footer-text-link-color;
+                }
+            }
+        }
+    } 
+    .footer-payment{
+        text-align: center;
+    }
+}
+/* End CSS footer */

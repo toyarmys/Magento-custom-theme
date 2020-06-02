@@ -4,6 +4,12 @@
     ->setBlockId('slider')
     ->toHtml();
 ?>
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('slider-content')
+    ->toHtml();
+?>
 <script type="text/javascript" xml="space">
     require([
         'jquery',

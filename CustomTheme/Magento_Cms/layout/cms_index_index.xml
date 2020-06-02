@@ -26,50 +26,8 @@
             </container>
         </referenceContainer>
 
-        <referenceContainer name="footer">
-            <container 
-                name="footer.content" 
-                before="-" 
-                htmlTag="div" 
-                htmlClass="footer_content row">
-                <container 
-                name="footer.logo.and.info"
-                htmlTag="div"
-                htmlClass="logo-info-footer col-12 col-xl-3 col-lg-3">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Cms::footer.phtml"/>
-                </container>
-                <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Cms::footer-popular-tag.phtml"/>
-                <block class="Magento\Framework\View\Element\Template" name="footer.benefit" template="Magento_Cms::footer-benefit.phtml"/>
-                <container 
-                name="footer-social"
-                htmlTag="div"
-                htmlClass="footer-social-links col-xl-3 col-lg-3 col-12">
-                    <block class="Magento\Framework\View\Element\Template" name="footer.social" template="Magento_Cms::footer-social-links.phtml"/>
-                </container>
-            </container>
-            <container name="footer-policy"
-            after="footer.content"
-            htmlTag="div"
-            htmlClass="footer-policy">
-                <block class="Magento\Framework\View\Element\Template" name="policy" template="Magento_Cms::policy.phtml"/>
-            </container>
-            <container name="copyright.div"
-            after="footer-policy"
-            htmlTag="div"
-            htmlClass="footer-copyright">
-            </container>
-            <container name="payment.div"
-            after="copyright.div"
-            htmlTag="div"
-            htmlClass="footer-payment">
-                <block class="Magento\Framework\View\Element\Template" name="payment" template="Magento_Cms::payment.phtml"/>
-            </container>
-        </referenceContainer>
-
         <referenceContainer name="main.content" htmlTag="div" htmlClass="page-main-full-width">
             <container name="slider-owl-carousel" htmlTag="div" htmlClass="slider-container">
-                <block class="Magento\Framework\View\Element\Template" name="slider_test" template="Magento_Cms::slider.phtml" />
-                <block class="Magento\Framework\View\Element\Template" name="slider_content" template="Magento_Cms::slider-content.phtml" /> 
             </container>
             <container name="container" htmlTag="div" htmlClass="container">
                 <container name="row" htmlTag="div" htmlClass="row">
@@ -77,15 +35,28 @@
                     </container>
                     <container name="second-container" htmlClass="col-xl-3 col-lg-3 second-container" htmlTag="div">    
                     </container>
-                    <container name="third-container" htmlClass="col-xl-3 col-lg-3 third-container" htmlTag="div">    
+                    <container name="third-container" htmlClass="col-xl-3 col-lg-3 d-flex flex-column justify-content-between third-container" htmlTag="div">    
                     </container>
+                </container>
+                <container name="trending" htmlClass="trending-container" htmlTag="div">
                 </container>
             </container>
         </referenceContainer>
-        <referenceBlock name="footer_links" remove="true" />
-        <referenceBlock name="columns" remove="true" />
-        <referenceContainer name="row">
-            <block class="Magento\Framework\View\Element\Template" name="product_demo" template="Magento_Cms::introduction-product.phtml" />
+        <referenceContainer name="slider-owl-carousel">
+            <block class="Magento\Framework\View\Element\Template" name="slider_test" template="Magento_Cms::slider.phtml" />
         </referenceContainer>
+        <referenceContainer name="first-container">
+            <block class="Magento\Framework\View\Element\Template" name="ads_first_image" template="Magento_Cms::ads-first-image.phtml" />
+        </referenceContainer>
+        <referenceContainer name="second-container">
+            <block class="Magento\Framework\View\Element\Template" name="ads_second_image" template="Magento_Cms::ads-second-image.phtml" />
+        </referenceContainer>
+        <referenceContainer name="third-container">
+            <block class="Magento\Framework\View\Element\Template" name="ads_third_image" template="Magento_Cms::ads-third-image.phtml" />
+        </referenceContainer>
+        <referenceContainer name="trending">
+            <block class="Magento\Framework\View\Element\Template" name="trending-header" template="Magento_Cms::trending.phtml" />
+        </referenceContainer>
+        <referenceBlock name="columns" remove="true" />
     </body>
 </page>

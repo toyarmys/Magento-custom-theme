@@ -1,0 +1,13 @@
+<?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('ads-image-first-block')
+                ->toHtml();
+    ?>
+    <?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('first-image-content')
+                ->toHtml();
+    ?>
+

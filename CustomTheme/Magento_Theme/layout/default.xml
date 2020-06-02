@@ -27,5 +27,45 @@
                     <block class="Magento\Framework\View\Element\Template" name="payment" template="Magento_Theme::payment.phtml"/>
             </container>
         </referenceContainer>
+        <referenceContainer name="footer">
+            <container 
+                name="footer.content" 
+                before="-" 
+                htmlTag="div" 
+                htmlClass="footer_content row">
+                <container 
+                name="footer.logo.and.info"
+                htmlTag="div"
+                htmlClass="logo-info-footer col-12 col-xl-3 col-lg-3">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.logo" template="Magento_Cms::footer.phtml"/>
+                </container>
+                <block class="Magento\Framework\View\Element\Template" name="footer.popular.tag" template="Magento_Cms::footer-popular-tag.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="footer.benefit" template="Magento_Cms::footer-benefit.phtml"/>
+                <container 
+                name="footer-social"
+                htmlTag="div"
+                htmlClass="footer-social-links col-xl-3 col-lg-3 col-12">
+                    <block class="Magento\Framework\View\Element\Template" name="footer.social" template="Magento_Cms::footer-social-links.phtml"/>
+                </container>
+            </container>
+            <container name="footer-policy"
+            after="footer.content"
+            htmlTag="div"
+            htmlClass="footer-policy">
+                <block class="Magento\Framework\View\Element\Template" name="policy" template="Magento_Cms::policy.phtml"/>
+            </container>
+            <container name="copyright.div"
+            after="footer-policy"
+            htmlTag="div"
+            htmlClass="footer-copyright">
+            </container>
+            <container name="payment.div"
+            after="copyright.div"
+            htmlTag="div"
+            htmlClass="footer-payment">
+                <block class="Magento\Framework\View\Element\Template" name="payment" template="Magento_Cms::payment.phtml"/>
+            </container>
+        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true" />
     </body>
 </page>

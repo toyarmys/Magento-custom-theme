@@ -49,96 +49,6 @@ ul.header.links{
         font-size: @primary-font-size;
     }
 }
-
-/* CSS footer */
-footer.page-footer{
-    background-color: @main-background-footer !important;
-    font-size: @primary-font-size;
-    .footer_content{
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
-    }
-    /* CSS footer-info div*/
-    .footer-info{
-        font-size: 13px !important;
-        margin-top: 15px;
-        .footer-address, .footer-phone, .footer-mail{
-            display: flex;
-            .footer-address-content{
-                .translate(30px;0);
-            }
-            .footer-phone-content{
-                .translate(11px;0);
-            }
-            .footer-mail-content{
-                .translate(20px;0);
-            }
-        }
-    }
-    /*End CSS footer-info div*/
-    /* CSS Popular tags div */
-    .footer-popular-tag ul li{
-        display: inline-block;
-        border: 1px solid #ccc;
-        padding: 5px 10px;
-        margin-bottom: 5px !important;
-        a{color: @footer-text-link-color; text-decoration: none;}
-    }
-    /* End CSS popular tags div */
-    /* CSS benefit div */
-    .benefit{
-        display: flex; 
-        line-height: 5px;
-        margin-bottom: 15px;
-        .benefit-text{
-            .translate(15px;15px);
-        }
-    }
-    /* End CSS benefit div */
-    /* CSS soial footer div */
-    .footer-social-links ul{
-        padding: 0;
-        li{
-            display: inline-block;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            .round-borders(50%);
-            width: 30px;
-            height: 30px;
-            margin: 15px 10px 0 0;
-            a{
-                display: inline-block;
-                padding: 5px 7px;
-                color: @main-text-color;
-                &:hover{
-                    color: @main-color;
-                }
-            }
-        }
-    }
-    .footer-payment, .footer-copyright, .footer-policy{
-        margin-top: 15px !important;
-        .copyright{
-            color: @footer-text-link-color;
-            .link-footer{
-                text-decoration: none;
-                color: @main-color;
-            }
-        }
-        ul{
-            text-align: center;
-            li{
-                display: inline-block;
-                a{
-                    text-decoration: none;
-                    color: @footer-text-link-color;
-                }
-            }
-        }
-    } 
-    .footer-payment{
-        text-align: center;
-    }
-}
-/* End CSS footer */
 /* CSS copyright */
 .copyright{
     background-color: @main-background-footer !important;
@@ -147,19 +57,18 @@ footer.page-footer{
 /* End CSS copyright */
 /* CSS owl-carousel */
 .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
-    .position(absolute;50%;0;0;0)!important;
     font-size: 50px !important;
     .box-shadow(none) !important;
 }
 .owl-prev{
-    left: 0;
+    .position(absolute;50%;null;null;0)!important;
     .translate(40px;-50px);
     &:hover{
         background-color: rgba(255, 255, 255, 0);
     }
 }
 .owl-next{
-    right: 0;
+    .position(absolute;50%;0;null;null)!important;
     .translate(-40px;-50px);
     &:hover{
         background-color: rgba(255, 255, 255, 0);
@@ -190,13 +99,13 @@ footer.page-footer{
             font-weight: 100;
             .position(relative; 0; 0; 0; -23rem);
             font-weight: 100;
-            letter-spacing: 2rem;
         }
         .above-text{
-            .position(relative; -15rem; 0; 0; -31rem);
+            .position(relative; -25rem; 0; 0; -15.2rem);
             font-size: calc(@primary-font-size + 2.2rem);
             color: @main-color;
-            letter-spacing: 3.47rem;
+            letter-spacing: 0.7em;
+            line-height: 7.2rem;
             font-weight: 700;
         }
         .brand-name{
@@ -223,26 +132,154 @@ footer.page-footer{
     }
 }
 /*End CSS Carousel */
-/*CSS Container - Introduction products*/
-// .first-container{
-//     .position(relative;0;0;0;0);
-//     .content-container{
-//         .position(absolute;50%;0;0;50%);
-//         .translate(-50%;-50%);
-//         .autumn-collection{
-//             .position(relative;-11rem;0;0;-9rem);
-//             font-size: 2.4rem;
-//             color: @main-text-color;
-//             width: 50%;
-//         }
-//         .new-accessories{
-//             .position(relative;-12rem;0;0;-9rem);
-//             font-size: @primary-font-size;
-//             font-weight: 900;
-//         }
-//     }
-// }
-img.height-fix{
-    height: 54rem;
-    width: auto;
+/*CSS Container - Ads */
+.first-container{
+    .position(relative;0;0;0;0);
+    .content-container{
+        .position(absolute;50%;0;0;50%);
+        .translate(-50%;-50%);
+        .autumn-collection{
+            .position(relative;-11rem;0;0;-9rem);
+            font-size: 2.4rem;
+            color: @main-text-color;
+            width: 50%;
+        }
+        .new-accessories{
+            .position(relative;-12rem;0;0;-9rem);
+            font-size: @primary-font-size;
+            font-weight: 900;
+        }
+        .circle-label{
+            width: 6rem;
+            height: 6rem;
+            background-color: #2ea76f;
+            .round-borders(50%);
+            .position(relative;-16rem;null;null;26rem);
+            span{
+                color: @white-text-color;
+                font-size: 1.8rem;
+                line-height: 6rem;
+                padding: .6rem;
+            }
+        }
+    }
+}
+.second-container{
+    .position(relative;null;null;null;null);
+    img.height-fix{
+        height: 54rem;
+        width: auto;
+    }
+    .second-ads-content{
+        .position(absolute;50%;null;null;50%);
+        .translate(-50%;-50%);
+        p{
+            font-size: 3rem;
+            width: 50%;
+            line-height: 1;
+            .position(relative;-5rem;0;0;0);
+            .bolder-text{
+                font-weight: 900;
+                padding: 2px;
+            }
+            .normal-text{
+                font-weight: 400;
+                letter-spacing: 5px;
+            }
+        }
+    }
+}
+.third-container .ads-third-image-up,.third-container .ads-third-image-down{
+    .position(relative;0;0;0;0) !important;
+    .discount-label{
+        .position(absolute;50% - 12rem;0;0;50% - 18rem) !important;
+        .translate(-50%;-50%) !important;
+        width: 6rem;
+        height: 6rem;
+        .round-borders(50%);
+        background-color: @main-color !important;
+        .discount-amount{
+            line-height: 6rem;
+            font-size: 1.8rem;
+            padding: 1rem;
+            color: @white-text-color;
+        }
+    }
+    .casual-shoes{
+        .position(absolute;50%;0;0;50%) !important;
+        .translate(-50%;-50%) !important;
+        width: 60%;
+        .ads-third-normal-text{
+            font-size: 1.8rem;
+            .position(relative;-4rem;0;0;-3rem);
+        }
+        .ads-third-bolder-text{
+            font-size: 1.4rem;
+            font-weight: 900;
+            .position(relative;-4.5rem;0;0;-3rem);
+        }
+    }
+}
+/* End CSS Ads */
+/*CSS Trending */
+.trending-container{
+    .trending-header{
+        text-align: center;
+        .year-trending{
+            font-size: 8rem;
+            font-weight: 100;
+            color: @main-text-color;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .title-trending{
+            display: inline-block;
+            font-size: 1.8rem;
+            letter-spacing: 0.5em;
+            font-weight: 900;
+            .title-trending-text{
+                .position(relative;-7.2rem;0;0;.5rem);
+                background-color: @main-background-color;
+                &:after{
+                    .position(relative;0;0;0;4rem);
+                    content: "\f036";
+                    font-family: "fontAwesome";
+                    font-weight: 100;
+                    color: @main-text-color;
+                }
+                &:before{
+                    .position(relative;0;0;0;-4rem);
+                    content: "\f038";
+                    font-family: "fontAwesome";
+                    font-weight: 100;
+                    color: @main-text-color;
+                }
+            }
+        }
+    }
+    .trending-pagination{
+        margin-bottom: 2rem;
+        h3{
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0 3rem;
+        }
+        .best-seller{
+            color: @main-color;
+            &:before{
+                content: "\f00c";
+                font-family: "fontAwesome";
+                font-weight: 100;
+                color: @main-color;
+                .position(relative;0;0;0;-2rem);
+            }
+        }
+        .on-sale, .most-viewed{
+            &:before{
+                content: "\f00d";
+                font-family: "fontAwesome";
+                font-weight: 100;
+                .position(relative;0;0;0;-2rem);
+            }
+        }
+    }
 }

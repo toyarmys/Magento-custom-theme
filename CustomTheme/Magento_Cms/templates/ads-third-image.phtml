@@ -1,0 +1,28 @@
+<div class="ads-third-image-up">
+<?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('ads-image-third-up-block')
+                ->toHtml();
+    ?>
+    <?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('third-image-up-content')
+                ->toHtml();
+    ?>
+</div>
+<div class="ads-third-image-down">
+<?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('ads-image-third-down-block')
+                ->toHtml();
+    ?>
+    <?php
+        echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('third-content-image-down')
+                ->toHtml();
+    ?>
+</div>

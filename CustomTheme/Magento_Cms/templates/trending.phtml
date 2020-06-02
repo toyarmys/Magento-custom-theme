@@ -1,0 +1,26 @@
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('trending-block')
+    ->toHtml();
+?>
+<div class="trending-pagination d-flex justify-content-center">
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('best-seller')
+    ->toHtml();
+?>
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('on-sale')
+    ->toHtml();
+?>
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('most-viewed')
+    ->toHtml();
+?>
+</div>
